@@ -1,0 +1,19 @@
+<div class ="row">
+    <div class ="col-auto">
+        <h2>Blog Posts by {{user.username}}</h2>
+    </div>
+</div>
+<br>
+{{#if posts.length}}
+    <div id ="all_posts">
+        {{#each posts as |post|}}
+        {{> editItem post}}
+        {{/each}}
+    </div>
+{{else}}
+    <div class ="row">
+        <div class ="col-auto">
+            <h3>No posts yet!</h3>
+        </div>
+    </div>
+{{/if}}
