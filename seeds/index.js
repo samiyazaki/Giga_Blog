@@ -5,7 +5,7 @@ const seedPost=require('./postData');
 const seedAll=async()=>{
     await sequelize.sync({force:true});
     await seedUsers();
-    await seedPost();
+    await seedPosts();
     process.exit(0);
 };
 
