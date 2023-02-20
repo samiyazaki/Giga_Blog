@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giga Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class ="flex-column min-100-vh">
+    <nav class ="navbar">
+        <ul class ="flex-row">
+            <li class ="nav-item">
+                <a href ="/">Home</a></li>
+            <li class ="nav-item">
+                <a href ="/dashboard">Dashboard</a></li>
+            {{#unless loggedIn}}
+            <li class ="nav-item">
+                <a href ="/login">Login</a></li>
+            {{/unless}}
+            {{#if loggedIn}}
+            <li class = "nav-item">
+                <a href ="#">Logout</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+<header class ="hero">
+    <h1 class ="hero-title"><a href ="/dashboard">Giga Blog</a></h1>
+</header>
+
+<main class ="col-12">
+    {{{body}}}
+</main>
+<footer class ="flex-row justify-space-between px-1">
+    <p class ="footer-text">Giga Blog &copy; 2019</p>
+</footer>
+</body>
+</html>
+{{#if loggedIn}}
+<script src=""/js/logout.js"></script>
+{{/if}}
+
+{{! Path: controllers\home-routes.js }}
