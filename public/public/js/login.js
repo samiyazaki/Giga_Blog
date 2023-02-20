@@ -4,12 +4,12 @@ const loginFormHandler = async (event) => {
   const usernameEl = document.querySelector('#username-input-login').value.trim();
   const passwordEl = document.querySelector('#password-input-login').value.trim();
 
-  if (usernameEl && passwordEl) {
-    const response = await fetch('/api/users/login', {
+ 
+    const response = await fetch('/api/user/login', {
       method: 'POST',
       body: JSON.stringify({ 
-      usernameEl: usernameEl.value, 
-      passwordEl: passwordEl.value, 
+      username: usernameEl.value, 
+      password: passwordEl.value, 
     }),
       headers: { 'Content-Type': 'application/json' },
     });
@@ -19,8 +19,7 @@ const loginFormHandler = async (event) => {
     } else {
       alert('Failed to log in.');
     }
-  }
-};
+  };
 
 
 document
