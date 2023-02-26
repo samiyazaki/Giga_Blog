@@ -1,0 +1,23 @@
+
+[
+    {
+      "comment_text": "You don't know who I am but I know who you are.",
+      "user_id": 1,
+      "post_id": 1
+    },
+    {
+      "comment_text": "Evening, Jimmy. Noise Complaint?",
+      "user_id": 2,
+      "post_id": 2
+    },
+    {
+      "comment_text": "Two fried fish, fries and a soda for $5.99.",
+      "user_id": 3,
+      "post_id": 3
+    },
+    {
+      "comment_text": "I haven't backed down from a fight in my life, and I won't start tonight.",
+      "user_id": 4,
+      "post_id": 4
+    }
+  ]
