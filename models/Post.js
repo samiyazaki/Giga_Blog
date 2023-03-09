@@ -12,15 +12,22 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
-      type: DataTypes.STRING,
+    postTitle: {
+      type: DataTypes.STRING(25),
       allowNull: false,
+      unique: true,
     },
-    content: {
-      type: DataTypes.TEXT,
+    postContent: {
+      type: DataTypes.STRING(255),
       allowNull: false,
+      unique: true,
     },
-    user_id: {
+    dateCreated: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
