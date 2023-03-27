@@ -1,22 +1,27 @@
-[
-{
-        "title": "The future of hunting technology",
-        "content": "You ever heard of a drone that can shoot a gun? Well, now you have.",
-        "user_id": 1
+const { Post } = require('../models');
+const postdata = [
+{   
+        "postTitle": "The future of hunting technology",
+        "postContent": "You ever heard of a drone that can shoot a gun? Well, now you have.",
+        "userId": 1
     },
     {
-        "title": "Using AI to train your dog",
-        "content": "Have you ever wanted to train your dog to do something, but you just don't have the time? Well, now you can!",
-        "user_id": 2
+        "postTitle": "Using AI to train your dog",
+        "postContent": "Have you ever wanted to train your dog to do something, but you just don't have the time? Well, now you can!",
+        "userId": 2
     },
     {
-        "title": "Smart fish fryer",
-        "content": "Using basic AI, you can now cook your fish to perfection every time!",
-        "user_id": 3
+        "postTitle": "Smart fish fryer",
+        "postContent": "Using basic AI, you can now cook your fish to perfection every time!",
+        "userId": 3
     },
     {
-        "title": "Wresting with Robots",
-        "content": "Robots vs Wrestlers is the new sport of the future!",
-        "user_id": 4
+        "postTitle": "Wresting with Robots",
+        "postContent": "Robots vs Wrestlers is the new sport of the future!",
+        "userId": 4
     }
-]
+];
+
+const seedPost = () => Post.bulkCreate(postdata);
+
+module.exports = seedPost;
